@@ -1,0 +1,118 @@
+.question {
+  padding-top: 50px;
+  color: white;
+  &__content{
+    display: flex;
+    column-gap: 154px;
+  }
+  &__left{
+    width: 30%;
+    position: relative;
+  }
+  &__right{
+    width: 70%;
+  }
+  &__title{
+    color: #FFF;
+    font-family: Gotham Pro;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 117.2%;
+    margin-bottom: 21px;
+  }
+  &__subtitle{
+    color: #FFF;
+    font-family: Gotham Pro;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158.7%;
+  }
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @extend %buttonGradient;
+    padding: 36px 48px;
+    color: #000;
+    font-family: Gotham Pro;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 83px;
+    &-item {
+
+      &-content{
+        display: flex;
+        justify-content: space-between;
+      }
+      &-fade{
+        display: none;
+        color: #FFF;
+        font-family: Gotham Pro;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        margin-top: 15px;
+        padding-left: 10px;
+      }
+      &-left{
+        display: flex;
+        align-items: center;
+        column-gap: 81px;
+      }
+      &-icon, &-open{
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        @extend %FlexCenter;
+        color: white;
+        font-size: 35px;
+      }
+      &-text{
+        color: #FFF;
+        font-family: Gotham Pro;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+      }
+      &-icon {
+        background: #24242d;
+      }
+      &-open{
+        &:hover{
+          border: 3px solid  #62666F;
+          color: #62666F;
+        }
+        cursor: pointer;
+        border: 2px solid #24242d;
+        color: #24242d;
+        &::before{
+          content: '+';
+        }
+      }
+
+      &.active{
+        .question__list-item-fade{
+          display: block;
+        }
+        .question__list-item-icon{
+          background: linear-gradient(150deg, #6BA758 21.14%, #23503D 81.17%);;
+        }
+        .question__list-item-open{
+          border: 3px solid  #62666F;
+          color: #62666F;
+          &::before{
+            content: '-';
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,64 @@
+.header{
+  padding: 35px 0;
+  position: relative;
+  &__content{
+    @extend %FlexCenter;
+    gap: 40px;
+    color: white;
+    justify-content: space-between;
+  }
+  &__logo{
+    display: flex;
+    align-items: center;
+  }
+  &__lang-switch{
+    display: flex;
+    gap: 6px;
+    &-title{
+      color: #FFF;
+      font-family: Gotham Pro,sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  & svg{
+    max-width: 52px;
+    max-height: 45px;
+  }
+
+  & h1{
+    font-size: 12px;
+  }
+  &__nav{
+    width: 100%;
+    max-width: 680px;
+  }
+  &__list{
+    @extend %FlexCenter;
+    gap: 95px;
+
+    &-item{
+      font-size: 18px;
+    }
+  }
+  &__handlers{
+    @extend %FlexCenter;
+    gap: 20px;
+  }
+  &__btn{
+    white-space: nowrap;
+    &_bordered{
+      font-size: 18px;
+      padding: 16px 28px;
+      @extend %buttonBordered;
+    }
+    &-gradient{
+      @extend %buttonGradient;
+      padding: 20px 40px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
